@@ -2,10 +2,10 @@
 
 one:
   price: 1
-  name: MyString
+  name: MSWorkshop
   seller_id: 1
 
 two:
   price: 1
-  name: MyString
+  name: MyBestBook
   seller_id: 1
