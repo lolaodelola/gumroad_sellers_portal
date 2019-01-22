@@ -5,7 +5,7 @@ one:
   refunded: false
   product: one
 
-two:
+refunded:
   price: 1
-  refunded: false
-  product_id: 1
+  refunded: true
+  product: one

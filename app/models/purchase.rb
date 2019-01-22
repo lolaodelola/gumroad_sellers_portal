@@ -5,6 +5,8 @@ class Purchase < ApplicationRecord
 
   def refund
     update!(refunded: true)
+    seller = product.seller
+    seller.refund_purchase(price)
   end
 
   private
