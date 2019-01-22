@@ -2,7 +2,7 @@ class PurchasesController < ApplicationController
 
   def create
     purchase = Purchase.create!(purchase_params)
-    purchase.update!(price: purchase.product.price, seller_id: purchase.product.seller_id)
+    purchase.update!(seller_id: purchase.product.seller_id)
   end
 
   private
