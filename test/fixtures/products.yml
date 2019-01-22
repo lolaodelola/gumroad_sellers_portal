@@ -3,7 +3,7 @@
 one:
   price: 1
   name: MSWorkshop
-  seller_id: 1
+  seller: one
 
 two:
   price: 1

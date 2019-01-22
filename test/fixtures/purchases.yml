@@ -3,7 +3,7 @@
 one:
   price: 1
   refunded: false
-  product_id: 1
+  product: one
 
 two:
   price: 1
