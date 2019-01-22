@@ -12,4 +12,10 @@ class PurchaseTest < ActiveSupport::TestCase
 
     assert_equal true, purchase.refunded
   end
+
+  test "find purchases to be paid out" do
+    payouts = Purchase.prepare_payouts
+
+    refute_empty payouts
+  end
 end

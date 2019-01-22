@@ -5,9 +5,12 @@ one:
   refunded: false
   product: one
   seller: one
+  paid: false
+  created_at: 2019-01-7 16:51:24
 
 refunded:
   price: 1
   refunded: true
   product: one
   seller: one
+  paid: false

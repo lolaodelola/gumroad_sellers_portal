@@ -9,11 +9,16 @@ class Purchase < ApplicationRecord
     seller.refund_purchase(price)
   end
 
+  def self.prepare_payouts
+    where("paid = false and refunded = false and created_at <= ?", DateTime.now - 1.week)
+  end
+
   private
 
   def update_purchase_price
     update!(price: product.price)
   end
+
   def update_seller_balance
     seller.add_balance(price)
   end

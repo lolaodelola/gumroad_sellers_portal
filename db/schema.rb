@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_22_153238) do
+ActiveRecord::Schema.define(version: 2019_01_22_173331) do
 
   create_table "payouts", force: :cascade do |t|
     t.integer "total"
@@ -35,12 +35,13 @@ ActiveRecord::Schema.define(version: 2019_01_22_153238) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "seller_id"
+    t.boolean "paid", default: false
   end
 
   create_table "sellers", force: :cascade do |t|
     t.string "name"
-    t.integer "total_balance"
-    t.integer "current_balance"
+    t.integer "total_balance", default: 0
+    t.integer "current_balance", default: 0
     t.datetime "last_payout"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
