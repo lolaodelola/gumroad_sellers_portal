@@ -4,8 +4,10 @@ one:
   price: 1
   refunded: false
   product: one
+  seller: one
 
 refunded:
   price: 1
   refunded: true
   product: one
+  seller: one
