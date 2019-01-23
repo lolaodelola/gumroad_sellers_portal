@@ -1,13 +1,13 @@
 # GumRoad Seller's Portal
 
-# The Exercise
+## The Exercise
 [x] Reflect purchases made in the seller's balance
 [x] Reflect refunds made in the seller's balance
 [x] Create payouts for purchases made up to a week before the payout date
 [ ] Allow dynamic scheduling of payouts
 [x] Add indicies to tables
 
-# Key files & folders
+## Key files & folders
 
 | Path  | Test Status |
 | ------------- | ------------- |
@@ -18,7 +18,7 @@
 | db/ | N/A  |
 | test/ | N/A  |
 
-# Tests
+## Tests
 
 To install and run the tests locally:
 1. `git clone github.com:lolaodelola/gumroad_sellers_portal.git`
