@@ -2,10 +2,8 @@
 
 one:
   total_balance: 10
-  current_balance: 1
   last_payout: 2019-01-21 16:24:26
 
 two:
   total_balance: 1
-  current_balance: 1
   last_payout: 2019-01-21 16:24:26

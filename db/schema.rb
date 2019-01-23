@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_130924) do
+ActiveRecord::Schema.define(version: 2019_01_23_184302) do
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 2019_01_23_130924) do
   create_table "sellers", force: :cascade do |t|
     t.string "name"
     t.integer "total_balance", default: 0
-    t.integer "current_balance", default: 0
     t.datetime "last_payout"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
