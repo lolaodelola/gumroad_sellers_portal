@@ -10,22 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_184302) do
-
-  create_table "delayed_jobs", force: :cascade do |t|
-    t.integer "priority", default: 0, null: false
-    t.integer "attempts", default: 0, null: false
-    t.text "handler", null: false
-    t.text "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.string "locked_by"
-    t.string "queue"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
-  end
+ActiveRecord::Schema.define(version: 2019_01_23_193853) do
 
   create_table "payouts", force: :cascade do |t|
     t.integer "total"
@@ -33,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_01_23_184302) do
     t.integer "seller_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["seller_id"], name: "index_payouts_on_seller_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -41,6 +27,8 @@ ActiveRecord::Schema.define(version: 2019_01_23_184302) do
     t.integer "seller_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["id"], name: "index_products_on_id"
+    t.index ["seller_id"], name: "index_products_on_seller_id"
   end
 
   create_table "purchases", force: :cascade do |t|
@@ -51,6 +39,9 @@ ActiveRecord::Schema.define(version: 2019_01_23_184302) do
     t.datetime "updated_at", null: false
     t.integer "seller_id"
     t.boolean "paid", default: false
+    t.index ["id"], name: "index_purchases_on_id"
+    t.index ["product_id"], name: "index_purchases_on_product_id"
+    t.index ["seller_id"], name: "index_purchases_on_seller_id"
   end
 
   create_table "sellers", force: :cascade do |t|
@@ -59,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_01_23_184302) do
     t.datetime "last_payout"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["id"], name: "index_sellers_on_id"
   end
 
 end
